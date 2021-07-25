@@ -3,8 +3,6 @@ server:
   port: 8080
 
 spring:
-  profiles:
-    active: dev
 
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -14,7 +12,8 @@ spring:
 
   jpa:
     hibernate:
-      ddl-auto: update
+      ddl-auto: create
     properties:
       hibernate:
         format_sql: true
+    show-sql: true
